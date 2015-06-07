@@ -1,4 +1,4 @@
-# cs_api_spec
+# CodeSocial API spec
 ## Intro
 CodeSocial exposes a simple stateless JSON REST API to the developer.
 Interaction is possible with any regular HTTP client as long as the following
