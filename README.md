@@ -22,7 +22,7 @@ All routes expect the inclusion of a "token" parameter,
 use "$pbkdf2-sha512$60000$ZoyySeiSKCXErZNdEn0A8g$Xf0bwmt3avfklCnMSWIGFPSbY0LDrW3N13BB4IW/BmYAoAss/D/ClDGgcTgR96d6NFu2p./QsbEVHoU6dIFnTQ"
 for testing/implementation purposes.
 
-POST routes expect the inclusion of a "application/json" "Accept" header.
+POST routes expect the inclusion of an "application/json" "Accept" header.
 
 **CONTINUES SPAMMING OF ROUTES WILL GET YOUR IP BLACKLISTED**
 
@@ -86,19 +86,21 @@ POST /api/v1/tasks
        "processed": integer,
        "to_process": integer,
        "state": string,
-       "destination": string}
+       "destination": string, 
+       "timestamp": UNIX epoch}
     ], "completed": [
       {"module": string,
        "category": string,
        "processed": integer,
        "to_process": integer,
-       "destination": string}
+       "destination": string,
+       "timestamp": UNIX epoch}
     ]}
 
 ### Description:
     Returns state of tasks that are currently runnign or have finished running ("processed" and "completed" respectively).
     
-## POST api/v1/tasks
+## POST /api/v1/tasks
 ### Parameters:
     JSON object
     {"token": string,
