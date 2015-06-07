@@ -26,9 +26,15 @@ POST routes expect the inclusion of a "application/json" "Accept" header.
 
 **CONTINUES SPAMMING OF ROUTES WILL GET YOUR IP BLACKLISTED**
 
-# Endpoints
+## Endpoints
 The API exposes the following endpoints
+
 GET  /api/v1/balance
+
 GET  /api/v1/products
+
 GET  /api/v1/tasks
+
 POST /api/v1/tasks
+
+## GET /api/v1/balance
