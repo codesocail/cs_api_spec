@@ -113,7 +113,7 @@ POST /api/v1/tasks
     JSON object
     {"token": string,
      "id": integer, 
-     "destinations": array, 
+     "destination": array, 
      "quantity": integer}
 
 ### Returns:
@@ -133,8 +133,8 @@ POST /api/v1/tasks
     Creates a new task.
     The "id" parameter specifies the product id retrieved from the /api/v1/products GET route.
     The "quantity" parameter indicates number of desired actions to run on this task (e.g. number of likes to deliver).
-    Provide a single destination by including a "destination" parameter (e.g. valid instagram media URL) or provide 
-    a number of destinations by including a "destinations" array. If both are provided "destination" will take take precedence.
+    Create a single destination task by passing a "destination" string paramter  (e.g. valid instagram media URL) or a batch task by
+    providing multiople destinations in a json array.
 
     Depending on provided parameters (single or multiple destinations) the response will either come back with a "status": "ok" response
     and contain the total charge (price per action * product price) or contain a "valid_destinations" array and a total charge of 
